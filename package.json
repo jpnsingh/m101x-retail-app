@@ -1,0 +1,24 @@
+{
+  "name": "m101x-retail-app",
+  "version": "1.0.0",
+  "description": "Retail Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js",
+    "test-kitten": "mocha -R nyan test.js",
+    "test-gulp": "gulp test",
+    "watch": "gulp watch"
+  },
+  "author": "jpnsingh",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "~2.1.19",
+    "mongoose": "^4.6.6",
+    "underscore": "~1.8.3"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-mocha": "2.0.1",
+    "mocha": "2.2.4"
+  }
+}
