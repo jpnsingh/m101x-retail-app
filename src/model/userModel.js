@@ -2,16 +2,16 @@
     'use strict';
 
     var mongoose = require('mongoose'),
-        userSchema = require('../schema/user'),
+        userSchema = require('../schema/userSchema'),
         wagner = require('wagner-core'),
         util = require('util');
 
     mongoose.connect('mongodb://localhost:27017/test');
 
-    var User = mongoose.model('User', userSchema);
+    var UserModel = mongoose.model('User', userSchema);
 
-    wagner.factory('User', function () {
-        return User
+    wagner.factory('UserModel', function () {
+        return UserModel
     });
 
     // myFunction(User);

@@ -2,16 +2,16 @@
     'use strict';
 
     var mongoose = require('mongoose'),
-        categorySchema = require('../schema/category'),
+        categorySchema = require('../schema/categorySchema'),
         wagner = require('wagner-core'),
         util = require('util');
 
     mongoose.connect('mongodb://localhost:27017/test');
 
-    var Category = mongoose.model('Category', categorySchema);
+    var CategoryModel = mongoose.model('Category', categorySchema);
 
-    wagner.factory('Category', function () {
-        return Category
+    wagner.factory('CategoryModel', function () {
+        return CategoryModel
     });
 
     // myFunction(Category);

@@ -9,9 +9,9 @@
         var app = express();
 
         var setupApp = function (app, wagner) {
-            var userRouteHandler = wagner.invoke(function (User) {
+            var userRouteHandler = wagner.invoke(function (UserModel) {
                 return function (request, response) {
-                    User.findOne({_id: request.params.id}, function (error, user) {
+                    UserModel.findOne({_id: request.params.id}, function (error, user) {
                         response.json({user: user});
                     });
                 };
