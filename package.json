@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Retail Application",
   "main": "index.js",
+  "repository": {
+    "git": "git@github.com:jpnsingh/m101x-retail-app.git"
+  },
   "scripts": {
     "test": "mocha test/serverSpec.js",
     "test-kitten": "mocha -R nyan test/serverSpec.js",
@@ -13,7 +16,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "4.14.0",
+    "gulp-jshint": "2.0.2",
     "http-status": "0.2.3",
+    "jshint": "2.9.4",
+    "jshint-stylish": "2.2.1",
     "mongodb": "2.1.19",
     "mongoose": "4.6.6",
     "underscore": "1.8.3",

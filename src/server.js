@@ -2,8 +2,9 @@
     'use strict';
 
     var express = require('express'),
-        wagner = require('wagner-core'),
-        User = require('../src/model/userModel');
+        wagner = require('wagner-core');
+
+    require('../src/model/userModel');
 
     module.exports = function () {
         var app = express();
@@ -27,5 +28,5 @@
         setupApp(app, wagner);
 
         return app;
-    }
+    };
 })();

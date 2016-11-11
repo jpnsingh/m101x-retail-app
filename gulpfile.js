@@ -1,6 +1,15 @@
 (function () {
-    var gulp = require('gulp');
-    var mocha = require('gulp-mocha');
+    var gulp = require('gulp'),
+        mocha = require('gulp-mocha'),
+        jshint = require('gulp-jshint'),
+        stylish = require('jshint-stylish');
+
+    gulp.task('lint', function () {
+        gulp
+            .src('./src/**/*.js')
+            .pipe(jshint())
+            .pipe(jshint.reporter(stylish));
+    });
 
     gulp.task('test', function () {
         gulp

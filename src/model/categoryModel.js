@@ -2,23 +2,19 @@
     'use strict';
 
     var mongoose = require('mongoose'),
-        categorySchema = require('../schema/categorySchema'),
-        wagner = require('wagner-core'),
-        util = require('util');
+        categorySchema = require('../schema/categorySchema');
 
-    mongoose.connect('mongodb://localhost:27017/test');
+    module.exports = function (wagner) {
+        mongoose.connect('mongodb://localhost:27017/test');
 
-    var CategoryModel = mongoose.model('Category', categorySchema);
+        var CategoryModel = mongoose.model('Category', categorySchema, 'categories');
 
-    wagner.factory('CategoryModel', function () {
-        return CategoryModel
-    });
+        wagner.factory('CategoryModel', function () {
+            return CategoryModel;
+        });
 
-    // myFunction(Category);
-    //
-    // function myFunction(Category) {
-    //     Category.create({name: 'Electronics'}, function (error, doc) {
-    //         console.log(util.inspect(doc));
-    //     });
-    // }
+        return {
+            CategoryModel: CategoryModel
+        };
+    };
 })();

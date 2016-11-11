@@ -3,7 +3,7 @@
 
     var superagent = require('superagent');
     var assert = require('assert');
-    var app = require('../src/server');
+    var app = require('../../src/server');
 
     describe('server', function () {
 

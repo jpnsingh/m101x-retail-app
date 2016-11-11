@@ -7,9 +7,9 @@
     module.exports = function (wagner) {
         var api = express.Router();
 
-        api.get('/user/:id', wagner.invoke(function (User) {
+        api.get('/user/:id', wagner.invoke(function (UserModel) {
             return function (request, response) {
-                User.findOne({_id: request.params.id}, function (error, user) {
+                UserModel.findOne({_id: request.params.id}, function (error, user) {
                     if (error) {
                         return response.status(httpStatus.INTERNAL_SERVER_ERROR).json({error: error.toString()});
                     }
@@ -21,5 +21,7 @@
                 });
             };
         }));
+
+        return api;
     };
 })();
