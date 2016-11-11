@@ -2,7 +2,7 @@
     'use strict';
 
     var mongoose = require('mongoose'),
-        Category = require('./category');
+        Category = require('./categorySchema');
 
     var productSchema = {
         name: {
