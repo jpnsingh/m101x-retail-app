@@ -7,9 +7,9 @@
     module.exports = function (wagner) {
         var api = express.Router();
 
-        api.get('/product/id/:id', wagner.invoke(function (Product) {
+        api.get('/product/id/:id', wagner.invoke(function (ProductModel) {
             return function (request, response) {
-                Product.findOne({_id: request.params.id}, function (error, product) {
+                ProductModel.findOne({_id: request.params.id}, function (error, product) {
                     if (error) {
                         return response.status(httpStatus.INTERNAL_SERVER_ERROR).json({error: error.toString()});
                     }
@@ -21,5 +21,7 @@
                 });
             };
         }));
+
+        return api;
     };
 })();

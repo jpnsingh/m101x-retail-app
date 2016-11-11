@@ -9,11 +9,11 @@
         },
         parent: {
             type: String,
-            ref: Category
+            ref: 'Category'
         },
         ancestors: [{
             type: String,
-            ref: Category
+            ref: 'Category'
         }]
     };
 
