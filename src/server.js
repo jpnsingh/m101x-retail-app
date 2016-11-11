@@ -1,18 +1,30 @@
 (function () {
     'use strict';
 
-    var express = require('express');
+    var express = require('express'),
+        wagner = require('wagner-core'),
+        User = require('../src/model/userModel');
 
     module.exports = function () {
         var app = express();
 
-        app.get('/', function (request, response) {
-            response.send('Hello World from Express!!');
-        });
+        var setupApp = function (app, wagner) {
+            var userRouteHandler = wagner.invoke(function (User) {
+                return function (request, response) {
+                    User.findOne({_id: request.params.id}, function (error, user) {
+                        response.json({user: user});
+                    });
+                };
+            });
 
-        app.get('/user/:user', function (request, response) {
-            response.send('Page for user ' + request.params.user + ' with option ' + request.query.option);
-        });
+            app.get('/user/:id', userRouteHandler);
+
+            app.get('/', function (request, response) {
+                response.send('Hello World from Express!!');
+            });
+        };
+
+        setupApp(app, wagner);
 
         return app;
     }
