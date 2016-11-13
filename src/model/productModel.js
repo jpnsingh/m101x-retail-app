@@ -1,19 +1,17 @@
 (function () {
     'use strict';
 
-    var mongoose = require('mongoose'),
-        productSchema = require('../schema/productSchema'),
-        wagner = require('wagner-core');
+    var productSchema = require('../schema/productSchema');
 
-    mongoose.connect('mongodb://localhost:27017/test');
+    module.exports = function (mongoose, wagner) {
+        var ProductModel = mongoose.model('Product', productSchema, 'products');
 
-    var ProductModel = mongoose.model('Product', productSchema, 'products');
+        wagner.factory('ProductModel', function () {
+            return ProductModel;
+        });
 
-    wagner.factory('ProductModel', function () {
-        return ProductModel;
-    });
-
-    return {
-        ProductModel: ProductModel
+        return {
+            ProductModel: ProductModel
+        };
     };
 })();

@@ -2,7 +2,8 @@
     'use strict';
 
     var mongoose = require('mongoose'),
-        Category = require('./categorySchema');
+        Category = require('./categorySchema'),
+        fx = require('./fx');
 
     var productSchema = {
         name: {
@@ -18,7 +19,11 @@
         price: {
             amount: {
                 type: Number,
-                required: true
+                required: true,
+                set: function (value) {
+                    this.internal.approximatePriceUSD = value / fx()[this.price.currency || 1];
+                    return value;
+                }
             },
             currency: {
                 type: String,
@@ -26,7 +31,10 @@
                 required: true
             }
         },
-        category: Category.categorySchema
+        category: Category.categorySchema,
+        internal: {
+            approximatePriceUSD: Number
+        }
     };
 
     module.exports = new mongoose.Schema(productSchema);
