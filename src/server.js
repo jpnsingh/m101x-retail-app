@@ -10,15 +10,15 @@
         var app = express();
 
         var setupApp = function (app, wagner) {
-            var userRouteHandler = wagner.invoke(function (UserModel) {
-                return function (request, response) {
-                    UserModel.findOne({_id: request.params.id}, function (error, user) {
-                        response.json({user: user});
-                    });
-                };
-            });
-
-            app.get('/user/:id', userRouteHandler);
+            // var userRouteHandler = wagner.invoke(function (UserModel) {
+            //     return function (request, response) {
+            //         UserModel.findOne({_id: request.params.id}, function (error, user) {
+            //             response.json({user: user});
+            //         });
+            //     };
+            // });
+            //
+            // app.get('/user/:id', userRouteHandler);
 
             app.get('/', function (request, response) {
                 response.send('Hello World from Express!!');

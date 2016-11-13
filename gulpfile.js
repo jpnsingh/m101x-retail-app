@@ -13,7 +13,7 @@
 
     gulp.task('test', function () {
         gulp
-            .src('./test/*.js')
+            .src('./test/**/*.js')
             .pipe(mocha())
             .on('error', function (err) {
                 this.emit('end');

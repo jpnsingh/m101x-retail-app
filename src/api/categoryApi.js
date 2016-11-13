@@ -1,8 +1,8 @@
 (function () {
     'use strict';
 
-    var express = require('express');
-    var httpStatus = require('http-status');
+    var express = require('express'),
+        httpStatus = require('http-status');
 
     module.exports = function (wagner) {
         var api = express.Router();
