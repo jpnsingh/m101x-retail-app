@@ -4,7 +4,7 @@
     var express = require('express'),
         wagner = require('wagner-core');
 
-    require('./server/model/userModel');
+    require('../src/server/model')(wagner);
 
     module.exports = function () {
         var app = express();

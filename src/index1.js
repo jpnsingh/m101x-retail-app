@@ -3,7 +3,7 @@
 
     var express = require('express'),
         wagner = require('wagner-core'),
-        gulpConfig = require('../gulp/config');
+        config = require('config');
 
     require('./server/model')(wagner);
 
@@ -18,6 +18,6 @@
     app.use('/api', apis.categoryApi);
     app.use('/api', apis.productApi);
 
-    app.listen(gulpConfig.port.dev);
-    console.log('Listening on port %d...', gulpConfig.port.dev); // jshint ignore:line
+    app.listen(config.port);
+    console.log('Listening on port %d...', config.port); // jshint ignore:line
 })();

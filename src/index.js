@@ -2,8 +2,8 @@
     'use strict';
 
     var server = require('./server1')(),
-        port = 8090;
+        config = require('config');
 
-    server.listen(port);
-    console.log('Server listening on port %d...', port); // jshint ignore:line
+    server.listen(config.port);
+    console.log('Server listening on port %d...', config.port); // jshint ignore:line
 })();
