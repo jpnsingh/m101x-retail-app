@@ -2,7 +2,8 @@
     'use strict';
 
     var express = require('express'),
-        wagner = require('wagner-core');
+        wagner = require('wagner-core'),
+        gulpConfig = require('../gulp/config');
 
     require('./model')(wagner);
 
@@ -17,7 +18,6 @@
     app.use('/api', apis.categoryApi);
     app.use('/api', apis.productApi);
 
-    var portToListenTo = 8090;
-    app.listen(portToListenTo);
-    console.log('Listening on port %d...', portToListenTo); // jshint ignore:line
+    app.listen(gulpConfig.port.dev);
+    console.log('Listening on port %d...', gulpConfig.port.dev); // jshint ignore:line
 })();
