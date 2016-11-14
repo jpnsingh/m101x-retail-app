@@ -7,7 +7,7 @@
     "git": "git@github.com:jpnsingh/m101x-retail-app.git"
   },
   "scripts": {
-    "start": "node index1.js",
+    "start": "node src/index1.js",
     "test": "mocha test/serverSpec.js",
     "test-kitten": "mocha -R nyan test/serverSpec.js",
     "test-gulp": "gulp test",

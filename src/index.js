@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var server = require('./server')(),
+    var server = require('./server1')(),
         port = 8090;
 
     server.listen(port);

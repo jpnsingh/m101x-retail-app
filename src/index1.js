@@ -5,9 +5,9 @@
         wagner = require('wagner-core'),
         gulpConfig = require('../gulp/config');
 
-    require('./model')(wagner);
+    require('./server/model')(wagner);
 
-    var apis = require('./api')(wagner);
+    var apis = require('./server/api')(wagner);
 
     var app = express();
 

@@ -3,9 +3,9 @@
 
     var superagent = require('superagent'),
         assert = require('assert'),
-        app = require('../../src/server');
+        app = require('../../src/server1');
 
-    // require('../src/model/userModel');
+    require('../../src/server/model/userModel');
 
     describe('server', function () {
 
