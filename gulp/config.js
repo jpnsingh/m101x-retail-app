@@ -1,19 +1,24 @@
 (function () {
     'use strict';
 
-    var gulpUtil = require('gulp-util'),
-        cgf = require('config'),
-        path = require('path');
+    var cfg = require('config');
+
+    var build = {
+        root: '.build'
+    };
 
     module.exports = {
-        port: {
-            dev: 8090,
-            test: 3000
-        },
         paths: {
-            src: {},
-            dest: {},
-            publish: {}
+            src: {
+                js: './src/client/js'
+            },
+            dest: {
+                js: build.root + '/' + cfg.app + '/js'
+            },
+            publish: {
+                src: build.root + '**/*',
+                dest: '.publish'
+            }
         }
     };
 })();
