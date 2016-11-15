@@ -5,7 +5,7 @@
         .directive('helloWorld', function () {
             return {
                 replace: true,
-                template: '<h2>Hello, World from Angular Directive!!</h2>'
+                templateUrl: '/m101x-retail-app/src/client/views/templates/shared/directives/helloWorld.html'
             };
         });
 })();

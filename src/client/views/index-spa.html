@@ -12,10 +12,10 @@
         app.config(function ($routeProvider) {
             $routeProvider
                     .when('/', {
-                        template: '<h1>Home Page</h1><a data-ng-href="#/about">About</a>'
+                        templateUrl: '/m101x-retail-app/src/client/views/templates/spa/home.html'
                     })
                     .when('/about', {
-                        template: '<a data-ng-href="#/">Back to Home Page</a>'
+                        templateUrl: '/m101x-retail-app/src/client/views/templates/spa/about.html'
                     });
         });
     </script>
