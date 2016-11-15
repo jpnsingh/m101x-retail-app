@@ -18,6 +18,8 @@
     app.use('/api', apis.categoryApi);
     app.use('/api', apis.productApi);
 
+    app.use(express.static('../', {maxAge: 4 * 60 * 60 * 1000}));
+
     app.listen(config.port);
     console.log('Listening on port %d...', config.port); // jshint ignore:line
 })();
