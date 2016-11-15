@@ -7,8 +7,8 @@
     module.exports = gulp.task('build', function (callback) {
         runSequence(
             'lint',
-            // 'test',
-            // 'serve',
+            'clean',
+            'browserify',
             callback
         );
     });
