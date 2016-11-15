@@ -18,6 +18,7 @@
     });
 
     it('should fetch the category by id', function (done) {
+        httpBackend.whenGET('/m101x-retail-app/src/client/views/templates/categories/directives/category.html').passThrough();
         httpBackend.expectGET('/api/category/id/Electronics').respond({
             category: {_id: 'Electronics', ancestors: []}
         });
@@ -25,9 +26,10 @@
         element = compiler('<category></category>')(scope);
         scope.$apply();
 
-        httpBackend.flush();
-
-        assert.equal(element.text(), 'Showing Category: Electronics');
-        done();
+        scope.$on('CategoryController', function () {
+            httpBackend.flush();
+            assert.equal(element.text().trim(), 'Showing Category: Electronics');
+            done();
+        });
     });
 })();

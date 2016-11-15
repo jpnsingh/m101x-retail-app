@@ -8,5 +8,9 @@
                 .success(function (data) {
                     $scope.category = data.category;
                 });
+
+            setTimeout(function () {
+                $scope.$emit('CategoryController');
+            }, 0);
         });
 })();

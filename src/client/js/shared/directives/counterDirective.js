@@ -8,8 +8,5 @@
                 controller: 'CounterController',
                 templateUrl: '/m101x-retail-app/src/client/views/templates/shared/directives/counterDiv.html'
             };
-        })
-        .controller('CounterController', function ($scope) {
-            $scope.counter = 0;
         });
 })();
