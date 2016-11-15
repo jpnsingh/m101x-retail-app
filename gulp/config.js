@@ -13,6 +13,7 @@
                 js: './src/client/js'
             },
             dest: {
+                root: build.root,
                 js: build.root + '/' + cfg.app + '/js'
             },
             publish: {

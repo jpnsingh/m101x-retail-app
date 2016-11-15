@@ -2,13 +2,20 @@
     'use strict';
 
     var gulp = require('gulp'),
-        browserify = require('gulp-browserify'),
-        gulpConfig = require('../config');
+        browserify = require('browserify'),
+        source = require('vinyl-source-stream'),
+        browserifyShim = require('browserify-shim'),
+        gulpConfig = require('../config'),
+        config = require('config');
 
     module.exports = gulp.task('browserify', function () {
-        return gulp
-            .src(gulpConfig.paths.src.js + '/index.js')
-            .pipe(browserify())
+        return browserify({
+                entries: [gulpConfig.paths.src.js + '/app.js'],
+                debug: true
+            })
+            .transform(browserifyShim)
+            .bundle()
+            .pipe(source(config.app + '-bundle.js'))
             .pipe(gulp.dest(gulpConfig.paths.dest.js));
     });
 })();

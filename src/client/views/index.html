@@ -4,26 +4,10 @@
     <meta charset="UTF-8">
     <title>My Angular App</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-
-    <script type="text/javascript">
-        var app = angular.module('myApp', ['ng']);
-
-        app.directive('counterDirective', function () {
-            return {
-                controller: 'MyController',
-                template: '<div data-ng-click="counter = counter + 1">' +
-                'You\'ve clicked this div <strong>{{counter}}</strong> times.' +
-                '</div>'
-            };
-        });
-
-        app.controller('MyController', function ($scope) {
-            $scope.counter = 0;
-        });
-    </script>
+    <script type="text/javascript" src="../../../.build/m101x-retail-app/js/m101x-retail-app-bundle.js"></script>
 </head>
-<body data-ng-app="myApp">
-<div data-ng-controller="MyController">
+<body data-ng-app="m101x">
+<div>
     <div>
         <h2>Hello World from Angular</h2>
     </div>
