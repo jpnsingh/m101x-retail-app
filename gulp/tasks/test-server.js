@@ -4,7 +4,7 @@
     var gulp = require('gulp'),
         mocha = require('gulp-mocha');
 
-    module.exports = gulp.task('test', function () {
+    module.exports = gulp.task('test-server', function () {
         return gulp
             .src('./test/**/*.js')
             .pipe(mocha())
