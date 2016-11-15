@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    module.exports = angular.module('m101x.directives.counterDirective', ['ng'])
+    module.exports = angular.module('m101x.shared.directives.counterDirective', ['ng'])
         .directive('counterDirective', function () {
             return {
                 replace: true,

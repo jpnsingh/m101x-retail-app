@@ -15,10 +15,10 @@
                 '../node_modules/bardjs/dist/bard.js',
 
                 // Sources
-                '../src/client/js/directives/counterDirective.js',
+                '../src/client/js/shared/directives/counterDirective.js',
 
                 // Tests
-                '../test/spec/client/js/directives/counterDirectiveSpec.js'
+                'spec/client/js/shared/directives/counterDirectiveSpec.js'
             ],
             exclude: [],
             frameworks: [
