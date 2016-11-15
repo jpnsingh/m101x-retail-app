@@ -66,8 +66,8 @@
             singleRun: true,
 
             browserify: {
-                debug: true
-                // ,transform: ['babelify']
+                debug: true,
+                transform: ['babelify']
             }
         });
     };

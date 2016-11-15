@@ -26,6 +26,7 @@
     "wagner-core": "0.2.0"
   },
   "devDependencies": {
+    "babelify": "^7.3.0",
     "bardjs": "^0.1.8",
     "browserify": "^13.1.1",
     "browserify-istanbul": "^2.0.0",
@@ -33,6 +34,7 @@
     "chai": "^3.5.0",
     "fs-extra": "^1.0.0",
     "gulp": "3.9.1",
+    "gulp-babel": "^6.1.2",
     "gulp-browserify": "^0.5.1",
     "gulp-jshint": "2.0.2",
     "gulp-mocha": "2.0.1",
