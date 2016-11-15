@@ -12,10 +12,16 @@
         app.config(function ($routeProvider) {
             $routeProvider
                     .when('/', {
-                        templateUrl: '/m101x-retail-app/src/client/views/templates/spa/home.html'
+                        templateUrl: '/m101x-retail-app/src/client/views/templates/spa/home.html',
+                        controller: function ($scope) {
+                            $scope.aboutText = 'About';
+                        }
                     })
                     .when('/about', {
-                        templateUrl: '/m101x-retail-app/src/client/views/templates/spa/about.html'
+                        templateUrl: '/m101x-retail-app/src/client/views/templates/spa/about.html',
+                        controller: function ($scope) {
+                            $scope.backToHomeText = 'Back to Home';
+                        }
                     });
         });
     </script>
