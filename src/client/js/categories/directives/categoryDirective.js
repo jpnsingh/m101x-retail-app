@@ -6,9 +6,8 @@
             return {
                 replace: true,
                 controller: 'CategoryController',
-                template: '' +
-                '<div class="category" data-ng-show="category">' +
-                '   Showing Category: <strong>{{category._id}}</strong>' +
+                template: '<div class="category" data-ng-show="category">' +
+                'Showing Category: <strong>{{category._id}}</strong>' +
                 '</div>'
             };
         });

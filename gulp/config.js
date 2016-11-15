@@ -9,6 +9,7 @@
 
     module.exports = {
         paths: {
+            test: './test',
             src: {
                 js: './src/client/js'
             },

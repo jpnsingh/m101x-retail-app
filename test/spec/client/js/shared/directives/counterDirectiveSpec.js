@@ -7,7 +7,7 @@
             scope;
 
         beforeEach(function () {
-            injector = angular.injector(['m101x.shared.directives.counterDirective']);
+            injector = angular.injector(['m101x']);
 
             injector.invoke(function ($rootScope, $compile) {
                 scope = $rootScope.$new();
