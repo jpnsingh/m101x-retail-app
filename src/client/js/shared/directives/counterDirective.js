@@ -6,9 +6,7 @@
             return {
                 replace: true,
                 controller: 'CounterController',
-                template: '<div data-ng-click="counter = counter + 1">' +
-                'You\'ve clicked this div <strong>{{counter}}</strong> times.' +
-                '</div>'
+                templateUrl: '/m101x-retail-app/src/client/views/templates/shared/directives/counterDiv.html'
             };
         })
         .controller('CounterController', function ($scope) {

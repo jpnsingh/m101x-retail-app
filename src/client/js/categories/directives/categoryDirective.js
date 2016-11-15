@@ -6,9 +6,7 @@
             return {
                 replace: true,
                 controller: 'CategoryController',
-                template: '<div class="category" data-ng-show="category">' +
-                'Showing Category: <strong>{{category._id}}</strong>' +
-                '</div>'
+                templateUrl: '/m101x-retail-app/src/client/views/templates/categories/directives/category.html'
             };
         });
 })();
