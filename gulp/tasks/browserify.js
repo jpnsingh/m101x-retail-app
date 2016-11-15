@@ -10,7 +10,7 @@
 
     module.exports = gulp.task('browserify', function () {
         return browserify({
-                entries: [gulpConfig.paths.src.js + '/app.js'],
+                entries: [gulpConfig.paths.src.browserify.entry],
                 debug: true
             })
             .transform(browserifyShim)
