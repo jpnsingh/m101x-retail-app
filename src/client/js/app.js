@@ -4,8 +4,6 @@
     module.exports = angular.module('m101x', [
         'ng',
         require('./categories').name,
-        require('./services').name,
-        require('./directives').name,
-        require('./controllers').name
+        require('./shared').name
     ]);
 })();
