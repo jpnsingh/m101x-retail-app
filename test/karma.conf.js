@@ -26,7 +26,9 @@
                 'src/client/js/**/*.js',
 
                 // Tests
-                'test/spec/client/js/**/*.js'
+                'test/spec/client/js/**/*.js',
+
+                {pattern: 'src/client/views/templates/**/*.html', included: false, served: true}
             ],
 
             exclude: [],
@@ -54,7 +56,7 @@
             browsers: ['PhantomJS'],
 
             proxies: {
-                '/': 'http://localhost:3000'
+                '/m101x-retail-app': 'http://localhost:8084/base'
             },
 
             browserNoActivityTimeout: 10000,
