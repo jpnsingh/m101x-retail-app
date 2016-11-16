@@ -9,6 +9,7 @@
             'lint',
             'clean',
             'babel',
+            'templates',
             'browserify',
             callback
         );
