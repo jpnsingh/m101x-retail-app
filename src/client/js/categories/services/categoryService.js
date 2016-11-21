@@ -3,7 +3,7 @@
 
     module.exports = angular.module('m101x.categories.services.categoryService', [])
         .service('CategoryService', function ($http, apiConstants) {
-            let self = this;
+            var self = this;
 
             self.getCategory = function (id) {
                 return $http

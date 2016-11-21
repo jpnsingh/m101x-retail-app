@@ -13,8 +13,8 @@
         before(function () {
             var app = express();
 
-            var model = require('../../../src/server/model')(wagner).categoryModel;
-            app.use(require('../../../src/server/api')(wagner).categoryApi);
+            var model = require('../../../../src/server/model')(wagner).categoryModel;
+            app.use(require('../../../../src/server/api')(wagner).categoryApi);
 
             server = app.listen(3000);
 

@@ -6,7 +6,7 @@
 
     module.exports = gulp.task('test-server', function () {
         return gulp
-            .src('./test/**/*.js')
+            .src('./test/spec/server/**/*.js')
             .pipe(mocha())
             .on('error', function (err) {
                 this.emit('end');
